@@ -1,0 +1,21 @@
+namespace solucao81v2.db;
+
+context dados {
+
+    /*@@layout{"layoutInfo":{"x":-334,"y":-175.5}}*/
+    entity pessoas {
+        key id        : Integer;
+            nome      : dados.ty_nome;
+            sobrenome : dados.ty_nome;
+            endereco  : dados.ty_endereco;
+    };
+
+    /*@@layout{"layoutInfo":{"x":-568.5,"y":-175}}*/
+    type ty_nome : String(40);
+
+    /*@@layout{"layoutInfo":{"x":-785.345703125,"y":-175.5}}*/
+    type ty_endereco {
+        cidade : String(40);
+        pais   : String(30);
+    };
+};
